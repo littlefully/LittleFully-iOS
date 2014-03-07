@@ -11,6 +11,12 @@
 		03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8618C94A89000F91C7 /* NSString+Additionals.m */; };
 		03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8918C94ACA000F91C7 /* LFYObject.m */; };
 		03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */; };
+		03473C9018C95274000F91C7 /* LFYQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8F18C95274000F91C7 /* LFYQuery.m */; };
+		03473C9318C9557D000F91C7 /* LFYPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9218C9557D000F91C7 /* LFYPost.m */; };
+		03473C9618C9569D000F91C7 /* LFYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9518C9569D000F91C7 /* LFYUser.m */; };
+		03473C9918C957DA000F91C7 /* LFYPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9818C957DA000F91C7 /* LFYPhoto.m */; };
+		03473C9C18C95872000F91C7 /* LFYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9B18C95872000F91C7 /* LFYComment.m */; };
+		03473C9F18C958E9000F91C7 /* LFYTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9E18C958E9000F91C7 /* LFYTag.m */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
 		034961CC18C0A384007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
@@ -46,6 +52,18 @@
 		03473C8918C94ACA000F91C7 /* LFYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYObject.m; sourceTree = "<group>"; };
 		03473C8B18C94B19000F91C7 /* MTLModel+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTLModel+Additionals.h"; sourceTree = "<group>"; };
 		03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTLModel+Additionals.m"; sourceTree = "<group>"; };
+		03473C8E18C95274000F91C7 /* LFYQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYQuery.h; sourceTree = "<group>"; };
+		03473C8F18C95274000F91C7 /* LFYQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYQuery.m; sourceTree = "<group>"; };
+		03473C9118C9557D000F91C7 /* LFYPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYPost.h; sourceTree = "<group>"; };
+		03473C9218C9557D000F91C7 /* LFYPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPost.m; sourceTree = "<group>"; };
+		03473C9418C9569D000F91C7 /* LFYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYUser.h; sourceTree = "<group>"; };
+		03473C9518C9569D000F91C7 /* LFYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYUser.m; sourceTree = "<group>"; };
+		03473C9718C957DA000F91C7 /* LFYPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYPhoto.h; sourceTree = "<group>"; };
+		03473C9818C957DA000F91C7 /* LFYPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPhoto.m; sourceTree = "<group>"; };
+		03473C9A18C95872000F91C7 /* LFYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYComment.h; sourceTree = "<group>"; };
+		03473C9B18C95872000F91C7 /* LFYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYComment.m; sourceTree = "<group>"; };
+		03473C9D18C958E9000F91C7 /* LFYTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYTag.h; sourceTree = "<group>"; };
+		03473C9E18C958E9000F91C7 /* LFYTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYTag.m; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034961C718C0A384007880B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		034961C918C0A384007880B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +130,18 @@
 			children = (
 				03473C8818C94ACA000F91C7 /* LFYObject.h */,
 				03473C8918C94ACA000F91C7 /* LFYObject.m */,
+				03473C8E18C95274000F91C7 /* LFYQuery.h */,
+				03473C8F18C95274000F91C7 /* LFYQuery.m */,
+				03473C9118C9557D000F91C7 /* LFYPost.h */,
+				03473C9218C9557D000F91C7 /* LFYPost.m */,
+				03473C9418C9569D000F91C7 /* LFYUser.h */,
+				03473C9518C9569D000F91C7 /* LFYUser.m */,
+				03473C9718C957DA000F91C7 /* LFYPhoto.h */,
+				03473C9818C957DA000F91C7 /* LFYPhoto.m */,
+				03473C9A18C95872000F91C7 /* LFYComment.h */,
+				03473C9B18C95872000F91C7 /* LFYComment.m */,
+				03473C9D18C958E9000F91C7 /* LFYTag.h */,
+				03473C9E18C958E9000F91C7 /* LFYTag.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,10 +418,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */,
+				03473C9018C95274000F91C7 /* LFYQuery.m in Sources */,
+				03473C9F18C958E9000F91C7 /* LFYTag.m in Sources */,
 				03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */,
+				03473C9C18C95872000F91C7 /* LFYComment.m in Sources */,
 				034961D818C0A384007880B4 /* AppDelegate.m in Sources */,
 				03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */,
+				03473C9318C9557D000F91C7 /* LFYPost.m in Sources */,
 				03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */,
+				03473C9618C9569D000F91C7 /* LFYUser.m in Sources */,
+				03473C9918C957DA000F91C7 /* LFYPhoto.m in Sources */,
 				034961D418C0A384007880B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

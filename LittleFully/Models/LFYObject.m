@@ -14,7 +14,11 @@
 
 #import "MTLModel+Additionals.h"
 
+#import "LFYQuery.h"
+
 @implementation LFYObject
+
+@dynamic query;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return nil;
@@ -32,6 +36,10 @@
         return [[self class] toDateTransformer];
     }
     return nil;
+}
+
+- (LFYQuery *)query {
+    return [LFYQuery queryWithClass:self.class];
 }
 
 

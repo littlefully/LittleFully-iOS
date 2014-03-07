@@ -10,9 +10,17 @@
 
 #import <MTLJSONAdapter.h>
 
+#import <NSValueTransformer+MTLPredefinedTransformerAdditions.h>
+
+@class LFYQuery;
+
 @interface LFYObject : MTLModel <MTLJSONSerializing>
 
-- (NSString *)itemId;
+@property (nonatomic, copy, readonly) LFYQuery *query;
+
+@property (nonatomic, copy, readonly) NSString *objectId;
+
+@property (nonatomic, copy, readonly) NSDate *createdAt;
 
 - (void)save;
 
