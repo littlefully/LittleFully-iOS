@@ -12,7 +12,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    if (isRunningTests()) {
+        return YES;
+    }
+    
     return YES;
 }
 							
@@ -41,6 +44,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Unit Test
+
+static BOOL isRunningTests(void)
+{
+    NSDictionary* environment = [[NSProcessInfo processInfo] environment];
+    NSString* injectBundle = environment[@"XCInjectBundle"];
+    return [[injectBundle pathExtension] isEqualToString:@"xctest"];
 }
 
 @end

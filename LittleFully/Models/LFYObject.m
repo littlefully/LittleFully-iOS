@@ -21,7 +21,7 @@
 @dynamic query;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return nil;
+    return @{NSStringFromSelector(@selector(objectId)): @"id"};
 }
 
 + (NSValueTransformer *)JSONTransformerForKey:(NSString *)key {

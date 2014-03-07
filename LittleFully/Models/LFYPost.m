@@ -12,6 +12,8 @@
 
 #import "LFYPhoto.h"
 
+#import "LFYTag.h"
+
 @implementation LFYPost
 
 + (NSValueTransformer *)ownerJSONTransformer {
@@ -20,6 +22,10 @@
 
 + (NSValueTransformer *)photosJSONTransformer {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[LFYPhoto class]];
+}
+
++ (NSValueTransformer *)tagsJSONTransformer {
+    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[LFYTag class]];
 }
 
 @end
