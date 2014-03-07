@@ -22,6 +22,8 @@
 		03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */; };
 		03473CA918C960BB000F91C7 /* LFYUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA818C960BB000F91C7 /* LFYUserTests.m */; };
 		03473CAB18C96112000F91C7 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CAA18C96112000F91C7 /* User.json */; };
+		03473CAD18C961D6000F91C7 /* Photo.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CAC18C961D6000F91C7 /* Photo.json */; };
+		03473CAF18C961E3000F91C7 /* LFYPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CAE18C961E3000F91C7 /* LFYPhotoTests.m */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
 		034961CC18C0A384007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
@@ -74,6 +76,8 @@
 		03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Additionals.m"; sourceTree = "<group>"; };
 		03473CA818C960BB000F91C7 /* LFYUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYUserTests.m; sourceTree = "<group>"; };
 		03473CAA18C96112000F91C7 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		03473CAC18C961D6000F91C7 /* Photo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Photo.json; sourceTree = "<group>"; };
+		03473CAE18C961E3000F91C7 /* LFYPhotoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPhotoTests.m; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034961C718C0A384007880B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		034961C918C0A384007880B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +196,8 @@
 				03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */,
 				03473CA818C960BB000F91C7 /* LFYUserTests.m */,
 				03473CAA18C96112000F91C7 /* User.json */,
+				03473CAC18C961D6000F91C7 /* Photo.json */,
+				03473CAE18C961E3000F91C7 /* LFYPhotoTests.m */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03473CAD18C961D6000F91C7 /* Photo.json in Resources */,
 				034961F118C0A385007880B4 /* InfoPlist.strings in Resources */,
 				03473CAB18C96112000F91C7 /* User.json in Resources */,
 				03473CA418C959B0000F91C7 /* Post.json in Resources */,
@@ -462,6 +469,7 @@
 			files = (
 				03473CA218C9596E000F91C7 /* LFYPostTests.m in Sources */,
 				03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */,
+				03473CAF18C961E3000F91C7 /* LFYPhotoTests.m in Sources */,
 				03473CA918C960BB000F91C7 /* LFYUserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
