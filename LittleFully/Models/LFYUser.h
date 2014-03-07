@@ -14,4 +14,6 @@
 
 @property (nonatomic, copy, readonly) NSURL *avatar;
 
+@property (nonatomic, copy, readonly) NSNumber *numberOfPosts;
+
 @end

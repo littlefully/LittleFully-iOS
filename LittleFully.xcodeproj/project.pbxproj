@@ -20,6 +20,8 @@
 		03473CA218C9596E000F91C7 /* LFYPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA118C9596E000F91C7 /* LFYPostTests.m */; };
 		03473CA418C959B0000F91C7 /* Post.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CA318C959B0000F91C7 /* Post.json */; };
 		03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */; };
+		03473CA918C960BB000F91C7 /* LFYUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA818C960BB000F91C7 /* LFYUserTests.m */; };
+		03473CAB18C96112000F91C7 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CAA18C96112000F91C7 /* User.json */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
 		034961CC18C0A384007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
@@ -70,6 +72,8 @@
 		03473CA318C959B0000F91C7 /* Post.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Post.json; sourceTree = "<group>"; };
 		03473CA518C95C24000F91C7 /* XCTestCase+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Additionals.h"; sourceTree = "<group>"; };
 		03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Additionals.m"; sourceTree = "<group>"; };
+		03473CA818C960BB000F91C7 /* LFYUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYUserTests.m; sourceTree = "<group>"; };
+		03473CAA18C96112000F91C7 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034961C718C0A384007880B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		034961C918C0A384007880B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +190,8 @@
 				03473CA318C959B0000F91C7 /* Post.json */,
 				03473CA518C95C24000F91C7 /* XCTestCase+Additionals.h */,
 				03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */,
+				03473CA818C960BB000F91C7 /* LFYUserTests.m */,
+				03473CAA18C96112000F91C7 /* User.json */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				034961F118C0A385007880B4 /* InfoPlist.strings in Resources */,
+				03473CAB18C96112000F91C7 /* User.json in Resources */,
 				03473CA418C959B0000F91C7 /* Post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +462,7 @@
 			files = (
 				03473CA218C9596E000F91C7 /* LFYPostTests.m in Sources */,
 				03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */,
+				03473CA918C960BB000F91C7 /* LFYUserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
