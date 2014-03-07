@@ -1,0 +1,12 @@
+{
+    "id": "kdjaf121",
+    "content": "hello world",
+    "post": {
+        "id": "postIdsomething"
+    },
+    "owner": {
+        "id": "1214001",
+        "username": "nico",
+        "avatar": "http://littlefully.com/user/avatarsomething"
+    }
+}
