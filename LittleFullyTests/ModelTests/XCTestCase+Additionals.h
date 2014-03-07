@@ -12,4 +12,6 @@
 
 - (id)objectFromJSONFile:(NSString *)jsonFile;
 
+- (NSString *)stringFromDate:(NSDate *)date;
+
 @end

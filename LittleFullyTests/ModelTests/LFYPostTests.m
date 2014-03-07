@@ -46,6 +46,7 @@
     
     expect(error).to.beNil;
     expect(post).toNot.beNil;
+    expect([self stringFromDate:post.createdAt]).to.equal(postDictionary[@"createdAt"]);
     expect(post.objectId).to.equal(postDictionary[@"id"]);
     expect(post.caption).to.equal(postDictionary[@"caption"]);
     expect(post.numberOfComments).to.equal(postDictionary[@"numberOfComments"]);

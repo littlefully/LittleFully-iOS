@@ -49,6 +49,8 @@
     expect(comment.objectId).to.equal(commentDictionary[@"id"]);
     expect(comment.post.objectId).to.equal(commentDictionary[@"post"][@"id"]);
     expect(comment.owner.objectId).to.equal(commentDictionary[@"owner"][@"id"]);
+    expect([self stringFromDate:comment.createdAt]).to.equal(commentDictionary[@"createdAt"]);
+    
 }
 
 @end
