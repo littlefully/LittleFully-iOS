@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Little Fully. All rights reserved.
 //
 
-#import "LFYModel.h"
+#import "LFYObject.h"
 
 #import <NSValueTransformer+MTLPredefinedTransformerAdditions.h>
 
@@ -14,10 +14,14 @@
 
 #import "MTLModel+Additionals.h"
 
-@implementation LFYModel
+#import "LFYQuery.h"
+
+@implementation LFYObject
+
+@dynamic query;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return nil;
+    return @{NSStringFromSelector(@selector(objectId)): @"id"};
 }
 
 + (NSValueTransformer *)JSONTransformerForKey:(NSString *)key {
@@ -32,6 +36,10 @@
         return [[self class] toDateTransformer];
     }
     return nil;
+}
+
+- (LFYQuery *)query {
+    return [LFYQuery queryWithClass:self.class];
 }
 
 

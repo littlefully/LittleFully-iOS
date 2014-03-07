@@ -9,8 +9,25 @@
 /* Begin PBXBuildFile section */
 		03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */; };
 		03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8618C94A89000F91C7 /* NSString+Additionals.m */; };
-		03473C8A18C94ACA000F91C7 /* LFYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8918C94ACA000F91C7 /* LFYModel.m */; };
+		03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8918C94ACA000F91C7 /* LFYObject.m */; };
 		03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */; };
+		03473C9018C95274000F91C7 /* LFYQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8F18C95274000F91C7 /* LFYQuery.m */; };
+		03473C9318C9557D000F91C7 /* LFYPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9218C9557D000F91C7 /* LFYPost.m */; };
+		03473C9618C9569D000F91C7 /* LFYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9518C9569D000F91C7 /* LFYUser.m */; };
+		03473C9918C957DA000F91C7 /* LFYPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9818C957DA000F91C7 /* LFYPhoto.m */; };
+		03473C9C18C95872000F91C7 /* LFYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9B18C95872000F91C7 /* LFYComment.m */; };
+		03473C9F18C958E9000F91C7 /* LFYTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C9E18C958E9000F91C7 /* LFYTag.m */; };
+		03473CA218C9596E000F91C7 /* LFYPostTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA118C9596E000F91C7 /* LFYPostTests.m */; };
+		03473CA418C959B0000F91C7 /* Post.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CA318C959B0000F91C7 /* Post.json */; };
+		03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */; };
+		03473CA918C960BB000F91C7 /* LFYUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CA818C960BB000F91C7 /* LFYUserTests.m */; };
+		03473CAB18C96112000F91C7 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CAA18C96112000F91C7 /* User.json */; };
+		03473CAD18C961D6000F91C7 /* Photo.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CAC18C961D6000F91C7 /* Photo.json */; };
+		03473CAF18C961E3000F91C7 /* LFYPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CAE18C961E3000F91C7 /* LFYPhotoTests.m */; };
+		03473CB118C962B4000F91C7 /* LFYCommentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CB018C962B4000F91C7 /* LFYCommentTests.m */; };
+		03473CB318C962BE000F91C7 /* Comment.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CB218C962BE000F91C7 /* Comment.json */; };
+		03473CB518C96420000F91C7 /* Tag.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CB418C96420000F91C7 /* Tag.json */; };
+		03473CB718C96451000F91C7 /* LFYTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CB618C96451000F91C7 /* LFYTagTests.m */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
 		034961CC18C0A384007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
@@ -22,7 +39,6 @@
 		034961E818C0A385007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961E918C0A385007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
 		034961F118C0A385007880B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 034961EF18C0A385007880B4 /* InfoPlist.strings */; };
-		034961F318C0A385007880B4 /* LittleFullyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 034961F218C0A385007880B4 /* LittleFullyTests.m */; };
 		D8C2CC0D2DDD4913B7B9B9DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB8884C09F48F8BDFA944C /* libPods.a */; };
 		E462151C46E243E284DBEAA5 /* libPods-LittleFullyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D47127AB5F4B25B7157B9A /* libPods-LittleFullyTests.a */; };
 /* End PBXBuildFile section */
@@ -42,10 +58,34 @@
 		03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additionals.m"; sourceTree = "<group>"; };
 		03473C8518C94A89000F91C7 /* NSString+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additionals.h"; sourceTree = "<group>"; };
 		03473C8618C94A89000F91C7 /* NSString+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additionals.m"; sourceTree = "<group>"; };
-		03473C8818C94ACA000F91C7 /* LFYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYModel.h; sourceTree = "<group>"; };
-		03473C8918C94ACA000F91C7 /* LFYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYModel.m; sourceTree = "<group>"; };
+		03473C8818C94ACA000F91C7 /* LFYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYObject.h; sourceTree = "<group>"; };
+		03473C8918C94ACA000F91C7 /* LFYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYObject.m; sourceTree = "<group>"; };
 		03473C8B18C94B19000F91C7 /* MTLModel+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTLModel+Additionals.h"; sourceTree = "<group>"; };
 		03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTLModel+Additionals.m"; sourceTree = "<group>"; };
+		03473C8E18C95274000F91C7 /* LFYQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYQuery.h; sourceTree = "<group>"; };
+		03473C8F18C95274000F91C7 /* LFYQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYQuery.m; sourceTree = "<group>"; };
+		03473C9118C9557D000F91C7 /* LFYPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYPost.h; sourceTree = "<group>"; };
+		03473C9218C9557D000F91C7 /* LFYPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPost.m; sourceTree = "<group>"; };
+		03473C9418C9569D000F91C7 /* LFYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYUser.h; sourceTree = "<group>"; };
+		03473C9518C9569D000F91C7 /* LFYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYUser.m; sourceTree = "<group>"; };
+		03473C9718C957DA000F91C7 /* LFYPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYPhoto.h; sourceTree = "<group>"; };
+		03473C9818C957DA000F91C7 /* LFYPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPhoto.m; sourceTree = "<group>"; };
+		03473C9A18C95872000F91C7 /* LFYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYComment.h; sourceTree = "<group>"; };
+		03473C9B18C95872000F91C7 /* LFYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYComment.m; sourceTree = "<group>"; };
+		03473C9D18C958E9000F91C7 /* LFYTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYTag.h; sourceTree = "<group>"; };
+		03473C9E18C958E9000F91C7 /* LFYTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYTag.m; sourceTree = "<group>"; };
+		03473CA118C9596E000F91C7 /* LFYPostTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPostTests.m; sourceTree = "<group>"; };
+		03473CA318C959B0000F91C7 /* Post.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Post.json; sourceTree = "<group>"; };
+		03473CA518C95C24000F91C7 /* XCTestCase+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Additionals.h"; sourceTree = "<group>"; };
+		03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+Additionals.m"; sourceTree = "<group>"; };
+		03473CA818C960BB000F91C7 /* LFYUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYUserTests.m; sourceTree = "<group>"; };
+		03473CAA18C96112000F91C7 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		03473CAC18C961D6000F91C7 /* Photo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Photo.json; sourceTree = "<group>"; };
+		03473CAE18C961E3000F91C7 /* LFYPhotoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYPhotoTests.m; sourceTree = "<group>"; };
+		03473CB018C962B4000F91C7 /* LFYCommentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYCommentTests.m; sourceTree = "<group>"; };
+		03473CB218C962BE000F91C7 /* Comment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Comment.json; sourceTree = "<group>"; };
+		03473CB418C96420000F91C7 /* Tag.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tag.json; sourceTree = "<group>"; };
+		03473CB618C96451000F91C7 /* LFYTagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYTagTests.m; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034961C718C0A384007880B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		034961C918C0A384007880B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,7 +101,6 @@
 		034961E618C0A385007880B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		034961EE18C0A385007880B4 /* LittleFullyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LittleFullyTests-Info.plist"; sourceTree = "<group>"; };
 		034961F018C0A385007880B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		034961F218C0A385007880B4 /* LittleFullyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LittleFullyTests.m; sourceTree = "<group>"; };
 		16EB8884C09F48F8BDFA944C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D34D8E9DA5A46A79B3FCA95 /* Pods-LittleFullyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleFullyTests.xcconfig"; path = "Pods/Pods-LittleFullyTests.xcconfig"; sourceTree = "<group>"; };
 		72E63961C8804D06A55ECA04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -110,8 +149,20 @@
 		03473C7D18C949D2000F91C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				03473C8818C94ACA000F91C7 /* LFYModel.h */,
-				03473C8918C94ACA000F91C7 /* LFYModel.m */,
+				03473C8818C94ACA000F91C7 /* LFYObject.h */,
+				03473C8918C94ACA000F91C7 /* LFYObject.m */,
+				03473C8E18C95274000F91C7 /* LFYQuery.h */,
+				03473C8F18C95274000F91C7 /* LFYQuery.m */,
+				03473C9118C9557D000F91C7 /* LFYPost.h */,
+				03473C9218C9557D000F91C7 /* LFYPost.m */,
+				03473C9418C9569D000F91C7 /* LFYUser.h */,
+				03473C9518C9569D000F91C7 /* LFYUser.m */,
+				03473C9718C957DA000F91C7 /* LFYPhoto.h */,
+				03473C9818C957DA000F91C7 /* LFYPhoto.m */,
+				03473C9A18C95872000F91C7 /* LFYComment.h */,
+				03473C9B18C95872000F91C7 /* LFYComment.m */,
+				03473C9D18C958E9000F91C7 /* LFYTag.h */,
+				03473C9E18C958E9000F91C7 /* LFYTag.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +193,25 @@
 			children = (
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		03473CA018C9593E000F91C7 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				03473CA118C9596E000F91C7 /* LFYPostTests.m */,
+				03473CA318C959B0000F91C7 /* Post.json */,
+				03473CA518C95C24000F91C7 /* XCTestCase+Additionals.h */,
+				03473CA618C95C24000F91C7 /* XCTestCase+Additionals.m */,
+				03473CA818C960BB000F91C7 /* LFYUserTests.m */,
+				03473CAA18C96112000F91C7 /* User.json */,
+				03473CAC18C961D6000F91C7 /* Photo.json */,
+				03473CAE18C961E3000F91C7 /* LFYPhotoTests.m */,
+				03473CB018C962B4000F91C7 /* LFYCommentTests.m */,
+				03473CB218C962BE000F91C7 /* Comment.json */,
+				03473CB418C96420000F91C7 /* Tag.json */,
+				03473CB618C96451000F91C7 /* LFYTagTests.m */,
+			);
+			path = ModelTests;
 			sourceTree = "<group>";
 		};
 		034961BB18C0A384007880B4 = {
@@ -209,7 +279,7 @@
 		034961EC18C0A385007880B4 /* LittleFullyTests */ = {
 			isa = PBXGroup;
 			children = (
-				034961F218C0A385007880B4 /* LittleFullyTests.m */,
+				03473CA018C9593E000F91C7 /* ModelTests */,
 				034961ED18C0A385007880B4 /* Supporting Files */,
 			);
 			path = LittleFullyTests;
@@ -313,7 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03473CB518C96420000F91C7 /* Tag.json in Resources */,
+				03473CAD18C961D6000F91C7 /* Photo.json in Resources */,
 				034961F118C0A385007880B4 /* InfoPlist.strings in Resources */,
+				03473CB318C962BE000F91C7 /* Comment.json in Resources */,
+				03473CAB18C96112000F91C7 /* User.json in Resources */,
+				03473CA418C959B0000F91C7 /* Post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,10 +463,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */,
+				03473C9018C95274000F91C7 /* LFYQuery.m in Sources */,
+				03473C9F18C958E9000F91C7 /* LFYTag.m in Sources */,
 				03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */,
+				03473C9C18C95872000F91C7 /* LFYComment.m in Sources */,
 				034961D818C0A384007880B4 /* AppDelegate.m in Sources */,
 				03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */,
-				03473C8A18C94ACA000F91C7 /* LFYModel.m in Sources */,
+				03473C9318C9557D000F91C7 /* LFYPost.m in Sources */,
+				03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */,
+				03473C9618C9569D000F91C7 /* LFYUser.m in Sources */,
+				03473C9918C957DA000F91C7 /* LFYPhoto.m in Sources */,
 				034961D418C0A384007880B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +481,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034961F318C0A385007880B4 /* LittleFullyTests.m in Sources */,
+				03473CA218C9596E000F91C7 /* LFYPostTests.m in Sources */,
+				03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */,
+				03473CB118C962B4000F91C7 /* LFYCommentTests.m in Sources */,
+				03473CAF18C961E3000F91C7 /* LFYPhotoTests.m in Sources */,
+				03473CB718C96451000F91C7 /* LFYTagTests.m in Sources */,
+				03473CA918C960BB000F91C7 /* LFYUserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +636,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"EXP_SHORTHAND=1",
 				);
 				INFOPLIST_FILE = "LittleFullyTests/LittleFullyTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";

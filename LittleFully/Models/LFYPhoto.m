@@ -1,15 +1,13 @@
 //
-//  LFYModel.h
+//  LFYPhoto.m
 //  LittleFully
 //
 //  Created by Nico Prananta on 3/7/14.
 //  Copyright (c) 2014 Little Fully. All rights reserved.
 //
 
-#import "MTLModel.h"
+#import "LFYPhoto.h"
 
-#import <MTLJSONAdapter.h>
-
-@interface LFYModel : MTLModel <MTLJSONSerializing>
+@implementation LFYPhoto
 
 @end
