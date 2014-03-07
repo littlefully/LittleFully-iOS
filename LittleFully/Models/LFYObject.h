@@ -10,6 +10,12 @@
 
 #import <MTLJSONAdapter.h>
 
-@interface LFYModel : MTLModel <MTLJSONSerializing>
+@interface LFYObject : MTLModel <MTLJSONSerializing>
+
+- (NSString *)itemId;
+
+- (void)save;
+
+- (void)saveWithCompletion:(void(^)(id result, NSError *error))completion;
 
 @end

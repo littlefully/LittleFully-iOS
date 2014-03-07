@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Little Fully. All rights reserved.
 //
 
-#import "LFYModel.h"
+#import "LFYObject.h"
 
 #import <NSValueTransformer+MTLPredefinedTransformerAdditions.h>
 
@@ -14,7 +14,7 @@
 
 #import "MTLModel+Additionals.h"
 
-@implementation LFYModel
+@implementation LFYObject
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return nil;

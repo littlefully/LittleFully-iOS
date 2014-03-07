@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */; };
 		03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8618C94A89000F91C7 /* NSString+Additionals.m */; };
-		03473C8A18C94ACA000F91C7 /* LFYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8918C94ACA000F91C7 /* LFYModel.m */; };
+		03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8918C94ACA000F91C7 /* LFYObject.m */; };
 		03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
@@ -42,8 +42,8 @@
 		03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additionals.m"; sourceTree = "<group>"; };
 		03473C8518C94A89000F91C7 /* NSString+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additionals.h"; sourceTree = "<group>"; };
 		03473C8618C94A89000F91C7 /* NSString+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additionals.m"; sourceTree = "<group>"; };
-		03473C8818C94ACA000F91C7 /* LFYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYModel.h; sourceTree = "<group>"; };
-		03473C8918C94ACA000F91C7 /* LFYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYModel.m; sourceTree = "<group>"; };
+		03473C8818C94ACA000F91C7 /* LFYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYObject.h; sourceTree = "<group>"; };
+		03473C8918C94ACA000F91C7 /* LFYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYObject.m; sourceTree = "<group>"; };
 		03473C8B18C94B19000F91C7 /* MTLModel+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTLModel+Additionals.h"; sourceTree = "<group>"; };
 		03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTLModel+Additionals.m"; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +110,8 @@
 		03473C7D18C949D2000F91C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				03473C8818C94ACA000F91C7 /* LFYModel.h */,
-				03473C8918C94ACA000F91C7 /* LFYModel.m */,
+				03473C8818C94ACA000F91C7 /* LFYObject.h */,
+				03473C8918C94ACA000F91C7 /* LFYObject.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 				03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */,
 				034961D818C0A384007880B4 /* AppDelegate.m in Sources */,
 				03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */,
-				03473C8A18C94ACA000F91C7 /* LFYModel.m in Sources */,
+				03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */,
 				034961D418C0A384007880B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
