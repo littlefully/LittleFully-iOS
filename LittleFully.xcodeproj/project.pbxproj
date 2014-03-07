@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */; };
+		03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8618C94A89000F91C7 /* NSString+Additionals.m */; };
+		03473C8A18C94ACA000F91C7 /* LFYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8918C94ACA000F91C7 /* LFYModel.m */; };
+		03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
 		034961CC18C0A384007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
@@ -34,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03473C8218C94A6B000F91C7 /* NSObject+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additionals.h"; sourceTree = "<group>"; };
+		03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additionals.m"; sourceTree = "<group>"; };
+		03473C8518C94A89000F91C7 /* NSString+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additionals.h"; sourceTree = "<group>"; };
+		03473C8618C94A89000F91C7 /* NSString+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additionals.m"; sourceTree = "<group>"; };
+		03473C8818C94ACA000F91C7 /* LFYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYModel.h; sourceTree = "<group>"; };
+		03473C8918C94ACA000F91C7 /* LFYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYModel.m; sourceTree = "<group>"; };
+		03473C8B18C94B19000F91C7 /* MTLModel+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTLModel+Additionals.h"; sourceTree = "<group>"; };
+		03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTLModel+Additionals.m"; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034961C718C0A384007880B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		034961C918C0A384007880B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +94,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03473C7C18C949CA000F91C7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				03473C8218C94A6B000F91C7 /* NSObject+Additionals.h */,
+				03473C8318C94A6B000F91C7 /* NSObject+Additionals.m */,
+				03473C8518C94A89000F91C7 /* NSString+Additionals.h */,
+				03473C8618C94A89000F91C7 /* NSString+Additionals.m */,
+				03473C8B18C94B19000F91C7 /* MTLModel+Additionals.h */,
+				03473C8C18C94B19000F91C7 /* MTLModel+Additionals.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		03473C7D18C949D2000F91C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03473C8818C94ACA000F91C7 /* LFYModel.h */,
+				03473C8918C94ACA000F91C7 /* LFYModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03473C7E18C949D8000F91C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		03473C7F18C949DF000F91C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03473C8018C949ED000F91C7 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		03473C8118C94A2A000F91C7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		034961BB18C0A384007880B4 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +181,12 @@
 		034961CD18C0A384007880B4 /* LittleFully */ = {
 			isa = PBXGroup;
 			children = (
+				03473C8118C94A2A000F91C7 /* Networking */,
+				03473C8018C949ED000F91C7 /* Others */,
+				03473C7F18C949DF000F91C7 /* Views */,
+				03473C7E18C949D8000F91C7 /* Controllers */,
+				03473C7D18C949D2000F91C7 /* Models */,
+				03473C7C18C949CA000F91C7 /* Categories */,
 				034961D618C0A384007880B4 /* AppDelegate.h */,
 				034961D718C0A384007880B4 /* AppDelegate.m */,
 				034961DF18C0A384007880B4 /* Images.xcassets */,
@@ -319,7 +387,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */,
+				03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */,
 				034961D818C0A384007880B4 /* AppDelegate.m in Sources */,
+				03473C8418C94A6B000F91C7 /* NSObject+Additionals.m in Sources */,
+				03473C8A18C94ACA000F91C7 /* LFYModel.m in Sources */,
 				034961D418C0A384007880B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
