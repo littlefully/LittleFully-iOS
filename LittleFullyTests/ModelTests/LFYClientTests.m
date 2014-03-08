@@ -18,6 +18,8 @@
 
 #import "LFYTag.h"
 
+#import <AFHTTPSessionManager.h>
+
 @interface LFYClient (UnitTests)
 
 - (id)serializedResponseObject:(id)responseObject resultClass:(Class)resultClass error:(NSError **)error;
@@ -40,6 +42,13 @@
 {
     // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
+}
+
+- (void)testHTTPSessionManager {
+    LFYClient *client = [[LFYClient alloc] init];
+    expect(client).toNot.beNil;
+    expect(client.manager).toNot.beNil;
+    expect([client.manager isKindOfClass:[AFHTTPSessionManager class]]).to.equal(YES);
 }
 
 - (void)testArrayResponseObjectSerialization

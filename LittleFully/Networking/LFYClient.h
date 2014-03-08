@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 
 #ifdef DEBUG
-#define LITTLEFULLY_API_URL @"http://locahost:5000"
+#define LITTLEFULLY_API_URL @"http://localhost:5000"
 #else
 #define LITTLEFULLY_API_URL @"http://the.littlefully.com"
 #endif
 
+@class AFHTTPSessionManager;
+
 @interface LFYClient : NSObject
+
+@property (nonatomic, strong, readonly) AFHTTPSessionManager *manager;
 
 + (instancetype)sharedClient;
 

@@ -42,7 +42,7 @@
 - (NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
     __weak typeof (self) selfie = self;
     
-    return [_manager GET:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    return [self.manager GET:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         id obj = responseObject;
         NSError *err;
         if (responseObject && resultClass) {
