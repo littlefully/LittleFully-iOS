@@ -8,10 +8,6 @@
 
 #import <XCTest/XCTest.h>
 
-#import "XCTestCase+Additionals.h"
-
-#import <Expecta.h>
-
 #import "LFYUser.h"
 
 @interface LFYUserTests : XCTestCase

@@ -10,10 +10,6 @@
 
 #import "LFYTag.h"
 
-#import "XCTestCase+Additionals.h"
-
-#import <Expecta.h>
-
 @interface LFYTagTests : XCTestCase
 
 @end

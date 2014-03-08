@@ -28,6 +28,7 @@
 		03473CB318C962BE000F91C7 /* Comment.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CB218C962BE000F91C7 /* Comment.json */; };
 		03473CB518C96420000F91C7 /* Tag.json in Resources */ = {isa = PBXBuildFile; fileRef = 03473CB418C96420000F91C7 /* Tag.json */; };
 		03473CB718C96451000F91C7 /* LFYTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CB618C96451000F91C7 /* LFYTagTests.m */; };
+		03473CBD18C9E865000F91C7 /* LFYClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 03473CBC18C9E865000F91C7 /* LFYClient.m */; };
 		034961C818C0A384007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961CA18C0A384007880B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C918C0A384007880B4 /* CoreGraphics.framework */; };
 		034961CC18C0A384007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 		034961E818C0A385007880B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961C718C0A384007880B4 /* Foundation.framework */; };
 		034961E918C0A385007880B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034961CB18C0A384007880B4 /* UIKit.framework */; };
 		034961F118C0A385007880B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 034961EF18C0A385007880B4 /* InfoPlist.strings */; };
+		03BCA1A318CAC4CE007774B1 /* LFYClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1A218CAC4CE007774B1 /* LFYClientTests.m */; };
+		03BCA1A518CAC50A007774B1 /* ResponseArray.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BCA1A418CAC50A007774B1 /* ResponseArray.json */; };
 		D8C2CC0D2DDD4913B7B9B9DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB8884C09F48F8BDFA944C /* libPods.a */; };
 		E462151C46E243E284DBEAA5 /* libPods-LittleFullyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D47127AB5F4B25B7157B9A /* libPods-LittleFullyTests.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +89,8 @@
 		03473CB218C962BE000F91C7 /* Comment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Comment.json; sourceTree = "<group>"; };
 		03473CB418C96420000F91C7 /* Tag.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tag.json; sourceTree = "<group>"; };
 		03473CB618C96451000F91C7 /* LFYTagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYTagTests.m; sourceTree = "<group>"; };
+		03473CBB18C9E865000F91C7 /* LFYClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYClient.h; sourceTree = "<group>"; };
+		03473CBC18C9E865000F91C7 /* LFYClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYClient.m; sourceTree = "<group>"; };
 		034961C418C0A384007880B4 /* LittleFully.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleFully.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034961C718C0A384007880B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		034961C918C0A384007880B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +106,9 @@
 		034961E618C0A385007880B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		034961EE18C0A385007880B4 /* LittleFullyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LittleFullyTests-Info.plist"; sourceTree = "<group>"; };
 		034961F018C0A385007880B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		03BCA1A218CAC4CE007774B1 /* LFYClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYClientTests.m; sourceTree = "<group>"; };
+		03BCA1A418CAC50A007774B1 /* ResponseArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ResponseArray.json; sourceTree = "<group>"; };
+		03BCA1A618CAC609007774B1 /* LittleFullyTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LittleFullyTests-Prefix.pch"; sourceTree = "<group>"; };
 		16EB8884C09F48F8BDFA944C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D34D8E9DA5A46A79B3FCA95 /* Pods-LittleFullyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleFullyTests.xcconfig"; path = "Pods/Pods-LittleFullyTests.xcconfig"; sourceTree = "<group>"; };
 		72E63961C8804D06A55ECA04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 		03473C8118C94A2A000F91C7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				03473CBB18C9E865000F91C7 /* LFYClient.h */,
+				03473CBC18C9E865000F91C7 /* LFYClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 				03473CB218C962BE000F91C7 /* Comment.json */,
 				03473CB418C96420000F91C7 /* Tag.json */,
 				03473CB618C96451000F91C7 /* LFYTagTests.m */,
+				03BCA1A218CAC4CE007774B1 /* LFYClientTests.m */,
+				03BCA1A418CAC50A007774B1 /* ResponseArray.json */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -272,6 +284,7 @@
 				034961D018C0A384007880B4 /* InfoPlist.strings */,
 				034961D318C0A384007880B4 /* main.m */,
 				034961D518C0A384007880B4 /* LittleFully-Prefix.pch */,
+				03BCA1A618CAC609007774B1 /* LittleFullyTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -387,6 +400,7 @@
 				03473CAD18C961D6000F91C7 /* Photo.json in Resources */,
 				034961F118C0A385007880B4 /* InfoPlist.strings in Resources */,
 				03473CB318C962BE000F91C7 /* Comment.json in Resources */,
+				03BCA1A518CAC50A007774B1 /* ResponseArray.json in Resources */,
 				03473CAB18C96112000F91C7 /* User.json in Resources */,
 				03473CA418C959B0000F91C7 /* Post.json in Resources */,
 			);
@@ -473,6 +487,7 @@
 				03473C8A18C94ACA000F91C7 /* LFYObject.m in Sources */,
 				03473C9618C9569D000F91C7 /* LFYUser.m in Sources */,
 				03473C9918C957DA000F91C7 /* LFYPhoto.m in Sources */,
+				03473CBD18C9E865000F91C7 /* LFYClient.m in Sources */,
 				034961D418C0A384007880B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +498,7 @@
 			files = (
 				03473CA218C9596E000F91C7 /* LFYPostTests.m in Sources */,
 				03473CA718C95C24000F91C7 /* XCTestCase+Additionals.m in Sources */,
+				03BCA1A318CAC4CE007774B1 /* LFYClientTests.m in Sources */,
 				03473CB118C962B4000F91C7 /* LFYCommentTests.m in Sources */,
 				03473CAF18C961E3000F91C7 /* LFYPhotoTests.m in Sources */,
 				03473CB718C96451000F91C7 /* LFYTagTests.m in Sources */,
@@ -600,6 +616,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LittleFully/LittleFully-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = "LittleFully/LittleFully-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -614,6 +634,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LittleFully/LittleFully-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = "LittleFully/LittleFully-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -632,7 +656,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LittleFully/LittleFully-Prefix.pch";
+				GCC_PREFIX_HEADER = "LittleFully/LittleFullyTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -657,7 +681,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LittleFully/LittleFully-Prefix.pch";
+				GCC_PREFIX_HEADER = "LittleFully/LittleFullyTests-Prefix.pch";
 				INFOPLIST_FILE = "LittleFullyTests/LittleFullyTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
