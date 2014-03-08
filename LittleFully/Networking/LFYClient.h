@@ -32,7 +32,7 @@
  resultClass:(Class)resultClass
   completion:(void(^)(id result, NSError *error))completion;
 
-- (void)PUT:(NSString *)path
+- (NSURLSessionDataTask *)PUT:(NSString *)path
  parameters:(NSDictionary *)parameters
 resultClass:(Class)resultClass
  completion:(void(^)(id result, NSError *error))completion;
