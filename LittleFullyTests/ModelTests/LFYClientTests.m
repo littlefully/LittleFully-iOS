@@ -42,7 +42,7 @@
     [super tearDown];
 }
 
-- (void)testResponseObjectSerialization
+- (void)testArrayResponseObjectSerialization
 {
     NSArray *array = [self objectFromJSONFile:@"ResponseArray"];
     LFYClient *client = [[LFYClient alloc] init];
@@ -59,6 +59,18 @@
     
     post = [serializedObject lastObject];
     expect(post.objectId).to.equal([array lastObject][@"id"]);
+}
+
+- (void)testDictionaryResponseObjectSerialization {
+    NSDictionary *dictionary = [self objectFromJSONFile:@"Post"];
+    LFYClient *client = [[LFYClient alloc] init];
+    expect(client).toNot.beNil;
+    NSError *error;
+    id serializedObject = [client serializedResponseObject:dictionary resultClass:[LFYPost class] error:&error];
+    expect(error).to.beNil;
+    expect(serializedObject).toNot.beNil;
+    expect([serializedObject isKindOfClass:[LFYPost class]]).to.equal(YES);
+    expect([serializedObject objectId]).to.equal(dictionary[@"id"]);
 }
 
 @end
