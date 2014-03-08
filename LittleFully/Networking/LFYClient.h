@@ -37,7 +37,7 @@
 resultClass:(Class)resultClass
  completion:(void(^)(id result, NSError *error))completion;
 
-- (void)DELETE:(NSString *)path
+- (NSURLSessionDataTask *)DELETE:(NSString *)path
     parameters:(NSDictionary *)parameters
    resultClass:(Class)resultClass
     completion:(void(^)(id result, NSError *error))completion;

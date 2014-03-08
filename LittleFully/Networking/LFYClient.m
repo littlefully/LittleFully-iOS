@@ -71,8 +71,14 @@
     }];
 }
 
-- (void)DELETE:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+- (NSURLSessionDataTask *)DELETE:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+    __weak typeof (self) selfie = self;
     
+    return [self.manager DELETE:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [selfie handleResponseObject:responseObject resultClass:resultClass completion:completion];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [selfie handleError:error completion:completion];
+    }];
 }
 
 - (void)UPLOAD:(UIImage *)image completion:(void (^)(id, NSError *))completion {
