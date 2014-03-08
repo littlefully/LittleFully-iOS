@@ -27,7 +27,7 @@
                   resultClass:(Class)resultClass
                    completion:(void(^)(id result, NSError *error))completion;
 
-- (void)POST:(NSString *)path
+- (NSURLSessionDataTask *)POST:(NSString *)path
   parameters:(NSDictionary *)parameters
  resultClass:(Class)resultClass
   completion:(void(^)(id result, NSError *error))completion;
@@ -40,6 +40,9 @@ resultClass:(Class)resultClass
 - (void)DELETE:(NSString *)path
     parameters:(NSDictionary *)parameters
    resultClass:(Class)resultClass
+    completion:(void(^)(id result, NSError *error))completion;
+
+- (void)UPLOAD:(UIImage *)image
     completion:(void(^)(id result, NSError *error))completion;
 
 @end

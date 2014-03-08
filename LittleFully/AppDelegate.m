@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "LFYClient.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -15,6 +17,11 @@
     if (isRunningTests()) {
         return YES;
     }
+    
+    [[LFYClient sharedClient] POST:@"photos" parameters:@{@"original": @"memememememem"} resultClass:nil completion:^(id result, NSError *error) {
+        NSLog(@"Result: %@", result);
+        NSLog(@"Error: %@", error);
+    }];
     
     return YES;
 }

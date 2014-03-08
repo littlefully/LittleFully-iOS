@@ -42,6 +42,7 @@
 		034961F118C0A385007880B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 034961EF18C0A385007880B4 /* InfoPlist.strings */; };
 		03BCA1A318CAC4CE007774B1 /* LFYClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1A218CAC4CE007774B1 /* LFYClientTests.m */; };
 		03BCA1A518CAC50A007774B1 /* ResponseArray.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BCA1A418CAC50A007774B1 /* ResponseArray.json */; };
+		03BCA1A918CAD1A3007774B1 /* LFYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */; };
 		D8C2CC0D2DDD4913B7B9B9DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB8884C09F48F8BDFA944C /* libPods.a */; };
 		E462151C46E243E284DBEAA5 /* libPods-LittleFullyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D47127AB5F4B25B7157B9A /* libPods-LittleFullyTests.a */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,8 @@
 		03BCA1A218CAC4CE007774B1 /* LFYClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYClientTests.m; sourceTree = "<group>"; };
 		03BCA1A418CAC50A007774B1 /* ResponseArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ResponseArray.json; sourceTree = "<group>"; };
 		03BCA1A618CAC609007774B1 /* LittleFullyTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LittleFullyTests-Prefix.pch"; sourceTree = "<group>"; };
+		03BCA1A718CAD1A3007774B1 /* LFYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYHTTPSessionManager.h; sourceTree = "<group>"; };
+		03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYHTTPSessionManager.m; sourceTree = "<group>"; };
 		16EB8884C09F48F8BDFA944C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D34D8E9DA5A46A79B3FCA95 /* Pods-LittleFullyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleFullyTests.xcconfig"; path = "Pods/Pods-LittleFullyTests.xcconfig"; sourceTree = "<group>"; };
 		72E63961C8804D06A55ECA04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 			children = (
 				03473CBB18C9E865000F91C7 /* LFYClient.h */,
 				03473CBC18C9E865000F91C7 /* LFYClient.m */,
+				03BCA1A718CAD1A3007774B1 /* LFYHTTPSessionManager.h */,
+				03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 			files = (
 				03473C8D18C94B19000F91C7 /* MTLModel+Additionals.m in Sources */,
 				03473C9018C95274000F91C7 /* LFYQuery.m in Sources */,
+				03BCA1A918CAD1A3007774B1 /* LFYHTTPSessionManager.m in Sources */,
 				03473C9F18C958E9000F91C7 /* LFYTag.m in Sources */,
 				03473C8718C94A89000F91C7 /* NSString+Additionals.m in Sources */,
 				03473C9C18C95872000F91C7 /* LFYComment.m in Sources */,

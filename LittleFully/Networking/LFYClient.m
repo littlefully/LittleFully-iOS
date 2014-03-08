@@ -12,9 +12,11 @@
 
 #import <Mantle.h>
 
+#import "LFYHTTPSessionManager.h"
+
 @interface LFYClient ()
 
-@property (nonatomic, strong) AFHTTPSessionManager *manager;
+@property (nonatomic, strong) LFYHTTPSessionManager *manager;
 
 @end
 
@@ -34,7 +36,7 @@
 {
     self = [super init];
     if (self) {
-        _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:LITTLEFULLY_API_URL]];
+        _manager = [[LFYHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:LITTLEFULLY_API_URL]];
     }
     return self;
 }
@@ -43,27 +45,20 @@
     __weak typeof (self) selfie = self;
     
     return [self.manager GET:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        id obj = responseObject;
-        NSError *err;
-        if (responseObject && resultClass) {
-            obj = [selfie serializedResponseObject:responseObject resultClass:resultClass error:&err];
-        }
-        if (completion) {
-            if (err) {
-                completion(nil, err);
-            } else {
-                completion(obj, nil);
-            }
-        }
+        [selfie handleResponseObject:responseObject resultClass:resultClass completion:completion];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (completion) {
-            completion(nil, error);
-        }
+        [selfie handleError:error completion:completion];
     }];
 }
 
-- (void)POST:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+- (NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+    __weak typeof (self) selfie = self;
     
+    return [self.manager POST:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [selfie handleResponseObject:responseObject resultClass:resultClass completion:completion];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [selfie handleError:error completion:completion];
+    }];
 }
 
 - (void)PUT:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
@@ -72,6 +67,31 @@
 
 - (void)DELETE:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
     
+}
+
+- (void)UPLOAD:(UIImage *)image completion:(void (^)(id, NSError *))completion {
+    
+}
+
+- (void)handleResponseObject:(id)responseObject resultClass:(Class)resultClass completion:(void(^)(id result, NSError *error))completion {
+    id obj = responseObject;
+    NSError *err;
+    if (responseObject && resultClass) {
+        obj = [self serializedResponseObject:responseObject resultClass:resultClass error:&err];
+    }
+    if (completion) {
+        if (err) {
+            completion(nil, err);
+        } else {
+            completion(obj, nil);
+        }
+    }
+}
+
+- (void)handleError:(NSError *)error completion:(void(^)(id result, NSError *error))completion {
+    if (completion) {
+        completion(nil, error);
+    }
 }
 
 - (id)serializedResponseObject:(id)responseObject resultClass:(Class)resultClass error:(NSError **)error{
