@@ -16,4 +16,8 @@ extern NSString *const LFYResponseObjectErrorKey;
 
 @interface LFYHTTPSessionManager : AFHTTPSessionManager
 
+- (NSURLSessionUploadTask *)uploadTaskWithTask:(NSURLSessionUploadTask *)uploadTask
+                                      progress:(NSProgress * __autoreleasing *)progress
+                             completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler;
+
 @end

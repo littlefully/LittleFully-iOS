@@ -12,11 +12,19 @@
 
 #import <Mantle.h>
 
+#import <FBKVOController.h>
+
 #import "LFYHTTPSessionManager.h"
+
+#import "LFYPhoto.h"
+
+NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 
 @interface LFYClient ()
 
 @property (nonatomic, strong) LFYHTTPSessionManager *manager;
+
+@property (nonatomic, strong) NSMutableDictionary *uploadDictionary;
 
 @end
 
@@ -81,8 +89,49 @@
     }];
 }
 
-- (void)UPLOAD:(UIImage *)image completion:(void (^)(id, NSError *))completion {
+- (NSURLSessionUploadTask *)UPLOAD:(UIImage *)image progressBlock:(void(^)(double fractionCompleted))progressBlock completion:(void (^)(id, NSError *))completion {
+    __weak typeof (self) selfie = self;
     
+    NSData *data = UIImageJPEGRepresentation(image, 1);
+    
+    NSString *URLString = [NSString stringWithFormat:@"%@/buckets", LITTLEFULLY_API_URL];
+    
+    NSProgress *progress;
+    
+    NSMutableURLRequest *request = [[[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:nil error:nil] mutableCopy];
+    [request addValue:@"image/jpeg" forHTTPHeaderField:@"Content-Type"];
+    
+    NSURLSessionUploadTask *uploadTask = [self.manager.session uploadTaskWithRequest:request fromData:data];
+    
+    NSInteger uploadIdentifier = uploadTask.taskIdentifier;
+    [self.manager uploadTaskWithTask:uploadTask progress:&progress completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        [selfie.uploadDictionary removeObjectForKey:@(uploadIdentifier)];
+        if (completion) {
+            if (error) {
+                [selfie handleError:error completion:completion];
+            } else {
+                [selfie handleResponseObject:responseObject resultClass:[LFYPhoto class] completion:completion];
+            }
+        }
+    }];
+    
+    [self trackProgress:progress progressBlock:progressBlock task:uploadIdentifier];
+    [uploadTask resume];
+    
+    return nil;
+}
+
+- (void)trackProgress:(NSProgress *)progress progressBlock:(void(^)(double fractionCompleted))progressBlock task:(NSInteger)taskIdentifier{
+    if (progress && progressBlock) {
+        [progress setUserInfoObject:progressBlock forKey:progressBlockKey];
+        [progress addObserver:self forKeyPath:NSStringFromSelector(@selector(fractionCompleted)) options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew context:nil];
+        if (!self.uploadDictionary) {
+            self.uploadDictionary = [NSMutableDictionary dictionary];
+        }
+        if (![self.uploadDictionary objectForKey:@(taskIdentifier)]) {
+            [self.uploadDictionary setObject:progress forKey:@(taskIdentifier)];
+        }
+    }
 }
 
 - (void)handleResponseObject:(id)responseObject resultClass:(Class)resultClass completion:(void(^)(id result, NSError *error))completion {
@@ -122,6 +171,18 @@
         }
     }
     return obj;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    double fractionCompleted = [change[NSKeyValueChangeNewKey] doubleValue];
+    NSProgress *progress = (NSProgress *)object;
+    void (^progressBlock)(double fractionCompleted) = progress.userInfo[progressBlockKey];
+    if (progressBlock) {
+        progressBlock(fractionCompleted);
+    }
+    if (fractionCompleted >= 1) {
+        [progress removeObserver:self forKeyPath:keyPath];
+    }
 }
 
 @end

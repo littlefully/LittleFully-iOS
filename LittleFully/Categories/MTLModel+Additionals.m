@@ -41,16 +41,8 @@
 }
 
 + (NSValueTransformer *)toDateTransformer {
-    static dispatch_once_t onceToken;
-    static NSDateFormatter *dateFormatter;
-    
-    dispatch_once(&onceToken, ^{
-        dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    });
-    
-    return [MTLValueTransformer transformerWithBlock:^id(NSString *string) {
-        return [dateFormatter dateFromString:string];
+    return [MTLValueTransformer transformerWithBlock:^id(NSNumber *timestamp) {
+        return [NSDate dateWithTimeIntervalSince1970:timestamp.doubleValue/1000];
     }];
 }
 

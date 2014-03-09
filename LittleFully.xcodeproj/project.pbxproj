@@ -43,6 +43,7 @@
 		03BCA1A318CAC4CE007774B1 /* LFYClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1A218CAC4CE007774B1 /* LFYClientTests.m */; };
 		03BCA1A518CAC50A007774B1 /* ResponseArray.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BCA1A418CAC50A007774B1 /* ResponseArray.json */; };
 		03BCA1A918CAD1A3007774B1 /* LFYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */; };
+		03BCA1EC18CCC99B007774B1 /* emma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03BCA1EB18CCC99B007774B1 /* emma.jpg */; };
 		D8C2CC0D2DDD4913B7B9B9DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB8884C09F48F8BDFA944C /* libPods.a */; };
 		E462151C46E243E284DBEAA5 /* libPods-LittleFullyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D47127AB5F4B25B7157B9A /* libPods-LittleFullyTests.a */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		03BCA1A618CAC609007774B1 /* LittleFullyTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LittleFullyTests-Prefix.pch"; sourceTree = "<group>"; };
 		03BCA1A718CAD1A3007774B1 /* LFYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYHTTPSessionManager.h; sourceTree = "<group>"; };
 		03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYHTTPSessionManager.m; sourceTree = "<group>"; };
+		03BCA1EB18CCC99B007774B1 /* emma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = emma.jpg; path = ../../../../Desktop/tmp10/emma.jpg; sourceTree = "<group>"; };
 		16EB8884C09F48F8BDFA944C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D34D8E9DA5A46A79B3FCA95 /* Pods-LittleFullyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleFullyTests.xcconfig"; path = "Pods/Pods-LittleFullyTests.xcconfig"; sourceTree = "<group>"; };
 		72E63961C8804D06A55ECA04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		034961CE18C0A384007880B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03BCA1EB18CCC99B007774B1 /* emma.jpg */,
 				034961CF18C0A384007880B4 /* LittleFully-Info.plist */,
 				034961D018C0A384007880B4 /* InfoPlist.strings */,
 				034961D318C0A384007880B4 /* main.m */,
@@ -393,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				034961E018C0A384007880B4 /* Images.xcassets in Resources */,
+				03BCA1EC18CCC99B007774B1 /* emma.jpg in Resources */,
 				034961D218C0A384007880B4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

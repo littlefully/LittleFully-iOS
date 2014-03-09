@@ -25,6 +25,7 @@ PODS:
   - GoogleAnalytics-iOS-SDK (3.0.3)
   - Harpy (2.5.2)
   - JazzHands (0.0.3)
+  - KVOController (1.0.0)
   - LINEActivity (1.0)
   - Mantle (1.4):
     - Mantle/extobjc
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - GoogleAnalytics-iOS-SDK (~> 3.0.3)
   - Harpy
   - JazzHands
+  - KVOController
   - LINEActivity (from `https://github.com/nicnocquee/LINEActivity`)
   - Mantle
   - MBProgressHUD
@@ -85,6 +87,7 @@ SPEC CHECKSUMS:
   GoogleAnalytics-iOS-SDK: 7b0e55cfe5e70d60478a7b105f15ac71e8bc373e
   Harpy: b992e16082d1ae123f4a135eacfd07a6c6e1feb7
   JazzHands: 01a8a6e933746bc7a6c749bfd6ed95f2a91c91aa
+  KVOController: ead0912769f4fae399ca2274a6755b788b773958
   LINEActivity: daf2869057cf99778a4bc6ad92cb50e6b4ba966d
   Mantle: de026e86c183c5adfd453c1d8419babb787fea97
   MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622

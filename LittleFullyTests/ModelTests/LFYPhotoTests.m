@@ -41,8 +41,8 @@
     expect(photo.objectId).to.equal(photoDictionary[@"id"]);
     expect(photo.originalURL.absoluteString).to.equal(photoDictionary[@"originalURL"]);
     expect(photo.thumbnail200x200URL.absoluteString).to.equal(photoDictionary[@"thumbnail200x200URL"]);
-    expect([self stringFromDate:photo.createdAt]).to.equal(photoDictionary[@"createdAt"]);
-    expect([self stringFromDate:photo.timestamp]).to.equal(photoDictionary[@"timestamp"]);
+    expect([photo.createdAt timeIntervalSince1970]*1000).to.equal(photoDictionary[@"createdAt"]);
+    expect([photo.timestamp timeIntervalSince1970]*1000).to.equal(photoDictionary[@"timestamp"]);
     
 }
 

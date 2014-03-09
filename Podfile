@@ -24,6 +24,7 @@ pod 'TestFlightSDK', '~> 2.1.4'
 pod 'GoogleAnalytics-iOS-SDK', '~> 3.0.3'
 pod 'AFNetworking', '~> 2.0'
 pod 'VTAcknowledgementsViewController'
+pod 'KVOController'
 target :LittleFullyTests, :exclusive => true do
     pod 'OCMock', '~> 2.2.1'
     pod 'Expecta', '~> 0.2.3' 

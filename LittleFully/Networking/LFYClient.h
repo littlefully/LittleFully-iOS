@@ -15,10 +15,11 @@
 #endif
 
 @class AFHTTPSessionManager;
+@class LFYHTTPSessionManager;
 
 @interface LFYClient : NSObject
 
-@property (nonatomic, strong, readonly) AFHTTPSessionManager *manager;
+@property (nonatomic, strong, readonly) LFYHTTPSessionManager *manager;
 
 + (instancetype)sharedClient;
 
@@ -42,7 +43,8 @@ resultClass:(Class)resultClass
    resultClass:(Class)resultClass
     completion:(void(^)(id result, NSError *error))completion;
 
-- (void)UPLOAD:(UIImage *)image
-    completion:(void(^)(id result, NSError *error))completion;
+- (NSURLSessionUploadTask *)UPLOAD:(UIImage *)image
+                     progressBlock:(void(^)(double fractionCompleted))progressBlock
+                        completion:(void(^)(id result, NSError *error))completion;
 
 @end
