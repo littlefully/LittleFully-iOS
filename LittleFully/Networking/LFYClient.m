@@ -73,14 +73,27 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
         if (err) {
             [selfie handleError:err completion:completion];
         } else {
-            [user setAsMe];
-            completion(user, err);
+            if (user) {
+                [user setAsMe];
+                completion(user, err);
+            } else {
+                NSError *error = [NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorUserAuthenticationRequired userInfo:@{NSURLErrorFailingURLErrorKey: [NSURL URLWithString:[NSString stringWithFormat:@"%@/users/me", LITTLEFULLY_API_URL]]}];
+                completion(nil, error);
+            }
         }
     }];
 }
 
 - (NSURLSessionDataTask *)logoutWithCompletion:(void (^)())completion {
-    return nil;
+    __weak typeof (self) selfie = self;
+    return [self POST:@"users/logout" parameters:nil resultClass:nil completion:^(id result, NSError *error) {
+        if (error) {
+            [selfie handleError:error completion:completion];
+        } else {
+            [LFYUser removeMe];
+            [selfie handleResponseObject:result resultClass:nil completion:completion];
+        }
+    }];
 }
 
 #pragma mark - HTTP Methods

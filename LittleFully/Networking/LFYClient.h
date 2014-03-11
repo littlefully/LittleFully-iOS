@@ -41,6 +41,8 @@
 
 - (NSURLSessionDataTask *)logoutWithCompletion:(void(^)())completion;
 
+- (NSURLSessionDataTask *)fetchMeWithCompletion:(void (^)(id, NSError *))completion;
+
 #pragma mark - HTTP Methods
 
 - (NSURLSessionDataTask *)GET:(NSString *)path
