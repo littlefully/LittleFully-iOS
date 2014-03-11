@@ -39,9 +39,15 @@
                                    password:(NSString *)password
                                  completion:(void(^)(id result, NSError *error))completion;
 
-- (NSURLSessionDataTask *)logoutWithCompletion:(void(^)())completion;
+/**
+ *  Logout of API. On completion, [LFYUser me] will return nil.
+ *
+ *  @param completion block to execute on completion.
+ *
+ *  @return Session data task object.
+ */
 
-- (NSURLSessionDataTask *)fetchMeWithCompletion:(void (^)(id, NSError *))completion;
+- (NSURLSessionDataTask *)logoutWithCompletion:(void(^)())completion;
 
 #pragma mark - HTTP Methods
 
