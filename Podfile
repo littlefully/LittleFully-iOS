@@ -3,6 +3,7 @@ platform :ios, '7.0'
 # ignore all warnings from all pods
 inhibit_all_warnings!
 
+pod 'FXKeychain', '1.5'
 pod 'UIColor+MLPFlatColors', '~> 1.0'
 pod 'NSDate+TimeAgo'
 pod 'NSDate-Escort'

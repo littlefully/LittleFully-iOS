@@ -12,7 +12,7 @@
 
 #import <Mantle.h>
 
-#import <FBKVOController.h>
+#import <FXKeychain.h>
 
 #import "LFYHTTPSessionManager.h"
 
@@ -32,7 +32,7 @@ NSString *littleFullyCookieKey = @"com.littlefully.cookieKey";
 
 @property (nonatomic, strong) NSMutableDictionary *uploadDictionary;
 
-@property (nonatomic, strong) NSArray *cookies;
+@property (nonatomic, strong) NSDictionary *cookieProperties;
 
 @end
 
@@ -66,11 +66,10 @@ NSString *littleFullyCookieKey = @"com.littlefully.cookieKey";
         if (error) {
             [strongSelfie handleError:error completion:completion];
         } else {
-            NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:LITTLEFULLY_API_URL]];
-            if (cookies) {
-                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:cookies];
-                [[NSUserDefaults standardUserDefaults] setObject:data forKey:littleFullyCookieKey];
-                [[NSUserDefaults standardUserDefaults] synchronize];
+            NSHTTPCookie *cookie = [[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:LITTLEFULLY_API_URL]] firstObject];
+            if (cookie) {
+                [[FXKeychain defaultKeychain] setObject:cookie.properties forKey:littleFullyCookieKey];
+                self.cookieProperties = cookie.properties;
             }
             [strongSelfie fetchMeWithCompletion:completion];
         }
@@ -97,7 +96,8 @@ NSString *littleFullyCookieKey = @"com.littlefully.cookieKey";
 - (NSURLSessionDataTask *)logoutWithCompletion:(void (^)())completion {
     __weak typeof (self) selfie = self;
     return [self POST:@"users/logout" parameters:nil resultClass:nil completion:^(id result, NSError *error) {
-        selfie.cookies = nil;
+        selfie.cookieProperties = nil;
+        [[FXKeychain defaultKeychain] removeObjectForKey:littleFullyCookieKey];
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:nil forURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", LITTLEFULLY_API_URL]] mainDocumentURL:nil];
         if (error) {
             [selfie handleError:error completion:completion];
@@ -111,12 +111,16 @@ NSString *littleFullyCookieKey = @"com.littlefully.cookieKey";
 #pragma mark - HTTP Methods
 
 - (void)setupCookies {
-    if (!self.cookies) {
-        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:littleFullyCookieKey];
-        if (data) {
-            self.cookies = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:self.cookies forURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", LITTLEFULLY_API_URL]] mainDocumentURL:nil];
+    if (!self.cookieProperties) {
+        self.cookieProperties = [[FXKeychain defaultKeychain] objectForKey:littleFullyCookieKey];
+        NSHTTPCookie *cookie ;
+        if (self.cookieProperties && [self.cookieProperties isKindOfClass:[NSDictionary class]]) {
+            cookie = [NSHTTPCookie cookieWithProperties:self.cookieProperties];[[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:@[cookie] forURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", LITTLEFULLY_API_URL]] mainDocumentURL:nil];
+        } else {
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:nil forURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", LITTLEFULLY_API_URL]] mainDocumentURL:nil];
         }
+        
+        return;
     }
 }
 

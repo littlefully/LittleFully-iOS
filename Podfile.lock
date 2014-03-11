@@ -22,6 +22,7 @@ PODS:
   - BTBadgeView (1.1)
   - Expecta (0.2.4)
   - Floc-Reflection (0.1.0)
+  - FXKeychain (1.5)
   - GoogleAnalytics-iOS-SDK (3.0.3)
   - Harpy (2.5.2)
   - JazzHands (0.0.3)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - BTBadgeView (= 1.1)
   - Expecta (~> 0.2.3)
   - Floc-Reflection (~> 0.1.0)
+  - FXKeychain (= 1.5)
   - GoogleAnalytics-iOS-SDK (~> 3.0.3)
   - Harpy
   - JazzHands
@@ -84,6 +86,7 @@ SPEC CHECKSUMS:
   BTBadgeView: 1dfc926532251bd6882d875bb55721a398227ee6
   Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
   Floc-Reflection: 7b78cf77a8b57b3a9fcdcf06b1516445486b0bf7
+  FXKeychain: 90cc7bf9ba005e4d099a113a194792e7983c5778
   GoogleAnalytics-iOS-SDK: 7b0e55cfe5e70d60478a7b105f15ac71e8bc373e
   Harpy: b992e16082d1ae123f4a135eacfd07a6c6e1feb7
   JazzHands: 01a8a6e933746bc7a6c749bfd6ed95f2a91c91aa
