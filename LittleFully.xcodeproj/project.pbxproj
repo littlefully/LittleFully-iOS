@@ -44,6 +44,7 @@
 		03BCA1A518CAC50A007774B1 /* ResponseArray.json in Resources */ = {isa = PBXBuildFile; fileRef = 03BCA1A418CAC50A007774B1 /* ResponseArray.json */; };
 		03BCA1A918CAD1A3007774B1 /* LFYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */; };
 		03BCA1EC18CCC99B007774B1 /* emma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03BCA1EB18CCC99B007774B1 /* emma.jpg */; };
+		03BCA1EF18CEA845007774B1 /* LFYLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BCA1EE18CEA845007774B1 /* LFYLogin.m */; };
 		D8C2CC0D2DDD4913B7B9B9DB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EB8884C09F48F8BDFA944C /* libPods.a */; };
 		E462151C46E243E284DBEAA5 /* libPods-LittleFullyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D47127AB5F4B25B7157B9A /* libPods-LittleFullyTests.a */; };
 /* End PBXBuildFile section */
@@ -114,6 +115,8 @@
 		03BCA1A718CAD1A3007774B1 /* LFYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYHTTPSessionManager.h; sourceTree = "<group>"; };
 		03BCA1A818CAD1A3007774B1 /* LFYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYHTTPSessionManager.m; sourceTree = "<group>"; };
 		03BCA1EB18CCC99B007774B1 /* emma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = emma.jpg; path = ../../../../Desktop/tmp10/emma.jpg; sourceTree = "<group>"; };
+		03BCA1ED18CEA845007774B1 /* LFYLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFYLogin.h; sourceTree = "<group>"; };
+		03BCA1EE18CEA845007774B1 /* LFYLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFYLogin.m; sourceTree = "<group>"; };
 		16EB8884C09F48F8BDFA944C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D34D8E9DA5A46A79B3FCA95 /* Pods-LittleFullyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleFullyTests.xcconfig"; path = "Pods/Pods-LittleFullyTests.xcconfig"; sourceTree = "<group>"; };
 		72E63961C8804D06A55ECA04 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				03473C9B18C95872000F91C7 /* LFYComment.m */,
 				03473C9D18C958E9000F91C7 /* LFYTag.h */,
 				03473C9E18C958E9000F91C7 /* LFYTag.m */,
+				03BCA1ED18CEA845007774B1 /* LFYLogin.h */,
+				03BCA1EE18CEA845007774B1 /* LFYLogin.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				03473C9618C9569D000F91C7 /* LFYUser.m in Sources */,
 				03473C9918C957DA000F91C7 /* LFYPhoto.m in Sources */,
 				03473CBD18C9E865000F91C7 /* LFYClient.m in Sources */,
+				03BCA1EF18CEA845007774B1 /* LFYLogin.m in Sources */,
 				034961D418C0A384007880B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

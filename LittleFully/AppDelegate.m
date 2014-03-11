@@ -10,6 +10,8 @@
 
 #import "LFYClient.h"
 
+#import "LFYUser.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

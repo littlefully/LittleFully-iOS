@@ -12,8 +12,16 @@
 
 @property (nonatomic, copy, readonly) NSString *username;
 
+@property (nonatomic, copy, readonly) NSString *email;
+
 @property (nonatomic, copy, readonly) NSURL *avatar;
 
 @property (nonatomic, copy, readonly) NSNumber *numberOfPosts;
+
++ (LFYUser *)me;
+
++ (void)removeMe;
+
+- (void)setAsMe;
 
 @end

@@ -18,6 +18,10 @@
 
 #import "LFYPhoto.h"
 
+#import "LFYLogin.h"
+
+#import "LFYUser.h"
+
 NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 
 @interface LFYClient ()
@@ -48,6 +52,38 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
     }
     return self;
 }
+
+#pragma mark - APIs
+
+- (NSURLSessionDataTask *)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void (^)(id, NSError *))completion {
+    __weak typeof (self) selfie = self;
+    return [self POST:@"users/login" parameters:@{@"username": username, @"password": password} resultClass:[LFYLogin class] completion:^(id result, NSError *error) {
+        __strong typeof (selfie) strongSelfie = selfie;
+        if (error) {
+            [strongSelfie handleError:error completion:completion];
+        } else {
+            [strongSelfie fetchMeWithCompletion:completion];
+        }
+    }];
+}
+
+- (NSURLSessionDataTask *)fetchMeWithCompletion:(void (^)(id, NSError *))completion {
+    __weak typeof (self) selfie = self;
+    return [self GET:@"users/me" parameters:nil resultClass:[LFYUser class] completion:^(LFYUser *user, NSError *err) {
+        if (err) {
+            [selfie handleError:err completion:completion];
+        } else {
+            [user setAsMe];
+            completion(user, err);
+        }
+    }];
+}
+
+- (NSURLSessionDataTask *)logoutWithCompletion:(void (^)())completion {
+    return nil;
+}
+
+#pragma mark - HTTP Methods
 
 - (NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
     __weak typeof (self) selfie = self;
@@ -121,6 +157,8 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
     return nil;
 }
 
+#pragma mark - Progress handler
+
 - (void)trackProgress:(NSProgress *)progress progressBlock:(void(^)(double fractionCompleted))progressBlock task:(NSInteger)taskIdentifier{
     if (progress && progressBlock) {
         [progress setUserInfoObject:progressBlock forKey:progressBlockKey];
@@ -133,6 +171,8 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
         }
     }
 }
+
+#pragma mark - Response handler
 
 - (void)handleResponseObject:(id)responseObject resultClass:(Class)resultClass completion:(void(^)(id result, NSError *error))completion {
     id obj = responseObject;
@@ -172,6 +212,8 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
     }
     return obj;
 }
+
+#pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     double fractionCompleted = [change[NSKeyValueChangeNewKey] doubleValue];
