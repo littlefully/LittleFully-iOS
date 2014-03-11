@@ -14,6 +14,8 @@
 #define LITTLEFULLY_API_URL @"http://the.littlefully.com"
 #endif
 
+//#define LITTLEFULLY_API_URL @"http://the.littlefully.com"
+
 @class AFHTTPSessionManager;
 @class LFYHTTPSessionManager;
 
@@ -48,6 +50,8 @@
  */
 
 - (NSURLSessionDataTask *)logoutWithCompletion:(void(^)())completion;
+
+- (NSURLSessionDataTask *)fetchMeWithCompletion:(void (^)(id, NSError *))completion ;
 
 #pragma mark - HTTP Methods
 

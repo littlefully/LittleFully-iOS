@@ -24,11 +24,15 @@
 
 NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 
+NSString *littleFullyCookieKey = @"com.littlefully.cookieKey";
+
 @interface LFYClient ()
 
 @property (nonatomic, strong) LFYHTTPSessionManager *manager;
 
 @property (nonatomic, strong) NSMutableDictionary *uploadDictionary;
+
+@property (nonatomic, strong) NSArray *cookies;
 
 @end
 
@@ -62,6 +66,12 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
         if (error) {
             [strongSelfie handleError:error completion:completion];
         } else {
+            NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:[NSURL URLWithString:LITTLEFULLY_API_URL]];
+            if (cookies) {
+                NSData *data = [NSKeyedArchiver archivedDataWithRootObject:cookies];
+                [[NSUserDefaults standardUserDefaults] setObject:data forKey:littleFullyCookieKey];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
             [strongSelfie fetchMeWithCompletion:completion];
         }
     }];
@@ -87,6 +97,8 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 - (NSURLSessionDataTask *)logoutWithCompletion:(void (^)())completion {
     __weak typeof (self) selfie = self;
     return [self POST:@"users/logout" parameters:nil resultClass:nil completion:^(id result, NSError *error) {
+        selfie.cookies = nil;
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:nil forURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", LITTLEFULLY_API_URL]] mainDocumentURL:nil];
         if (error) {
             [selfie handleError:error completion:completion];
         } else {
@@ -98,9 +110,19 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 
 #pragma mark - HTTP Methods
 
+- (void)setupCookies {
+    if (!self.cookies) {
+        NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:littleFullyCookieKey];
+        if (data) {
+            self.cookies = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:self.cookies forURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", LITTLEFULLY_API_URL]] mainDocumentURL:nil];
+        }
+    }
+}
+
 - (NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+    [self setupCookies];
     __weak typeof (self) selfie = self;
-    
     return [self.manager GET:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         [selfie handleResponseObject:responseObject resultClass:resultClass completion:completion];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -109,6 +131,7 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 }
 
 - (NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+    [self setupCookies];
     __weak typeof (self) selfie = self;
     
     return [self.manager POST:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -119,6 +142,7 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 }
 
 - (NSURLSessionDataTask *)PUT:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+    [self setupCookies];
     __weak typeof (self) selfie = self;
     
     return [self.manager PUT:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -129,6 +153,7 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 }
 
 - (NSURLSessionDataTask *)DELETE:(NSString *)path parameters:(NSDictionary *)parameters resultClass:(Class)resultClass completion:(void (^)(id, NSError *))completion {
+    [self setupCookies];
     __weak typeof (self) selfie = self;
     
     return [self.manager DELETE:path parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -139,6 +164,7 @@ NSString *progressBlockKey = @"com.littlefully.progressBlockKey";
 }
 
 - (NSURLSessionUploadTask *)UPLOAD:(UIImage *)image progressBlock:(void(^)(double fractionCompleted))progressBlock completion:(void (^)(id, NSError *))completion {
+    [self setupCookies];
     __weak typeof (self) selfie = self;
     
     NSData *data = UIImageJPEGRepresentation(image, 1);

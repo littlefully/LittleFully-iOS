@@ -18,7 +18,7 @@
 {
     if (isRunningTests()) {
         return YES;
-    }
+    }     
     
     return YES;
 }
